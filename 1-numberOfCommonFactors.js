@@ -32,6 +32,7 @@ var commonFactors = function (a, b) {
 
 console.log(commonFactors(12, 6))
 
+
 // Optimal Approach using GCD
 var commonFactorsWIthGCD = function (a, b) {
     function gcd(x, y) {

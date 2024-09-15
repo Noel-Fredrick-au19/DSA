@@ -30,8 +30,8 @@ function getFactorialNumber(N) {
     } return factorial === N ? x : 0
 }
 
-console.log(factorial(6));  // Output: 3
-console.log(factorial(24)); // Output: 4
+console.log(getFactorialNumber(6));  // Output: 3
+console.log(getFactorialNumber(24)); // Output: 4
 console.log(getFactorialNumber(7));  // Output: 0
 
 // Given the rapid growth of factorials, this usually requires Object(log(N)) iterations.

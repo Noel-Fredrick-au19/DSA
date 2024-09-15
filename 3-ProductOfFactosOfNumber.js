@@ -1,5 +1,4 @@
 // Product of factors of number
-// Difficulty: BasicAccuracy: 26.8%Submissions: 6K+Points: 1
 // Given a number N. Calculate the product of all factors of N. Since Answer can be very large,compute the answer modulo 109+7.
 
 
@@ -68,6 +67,7 @@ function productOfFactors(N) {
 
 // Example usage
 let N = 6;
+
 console.log(productOfFactors(N)); // Output: 36
 
 
