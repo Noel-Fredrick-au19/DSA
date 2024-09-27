@@ -1,3 +1,4 @@
+// https://getsdeready.com/courses/design-dsa-combined/lesson/alternating-digit-sum-2/
 let alternateDigitSum = (n) => {
     let sign = 1;
     let res = 0;

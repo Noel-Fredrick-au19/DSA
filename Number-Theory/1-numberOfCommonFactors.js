@@ -30,20 +30,29 @@ var commonFactors = function (a, b) {
     return count;
 }
 
-console.log(commonFactors(12, 6))
+// console.log(commonFactors(12, 6))
 
 
 // Optimal Approach using GCD
 var commonFactorsWIthGCD = function (a, b) {
-    function gcd(x, y) {
-        while (y !== 0) {
-            let temp = y
-            y = x % y
-            x = temp
-        } return x
+    // function gcd(x, y) {
+    //     while (y !== 0) {
+    //         let temp = y
+    //         y = x % y
+    //         x = temp
+    //         // console.log('xxxx', x)
+    //     } return x
+    // }
+    let GCD = function (a, b) {
+        if (b === 0) return a
+        while (a !== 0) {
+            return GCD(b, a % b)
+        }
     }
+    console.log('GCD', GCD(270, 192)) //GCD is 6 or common highest factor is 6
 
-    let gcdValue = gcd(a, b)
+
+    let gcdValue = GCD(a, b)
     let count = 0;
     for (let i = 1; i <= gcdValue; i++) {
         if (a % i === 0 && b % i === 0) {
@@ -52,9 +61,10 @@ var commonFactorsWIthGCD = function (a, b) {
         }
     } return count;
 }
+console.log('commonFactorsWIthGCD', commonFactorsWIthGCD(270, 192)) //TOTAL count are 1,2,3,6 so sum is 4
 
-console.log(commonFactorsWIthGCD(12, 6))
 
 // TIme complexity for the optimal approach is O(9 * 2^n) because we are trying all the possible comibinations of digits for each positions in the numnber
 
-// Space Complexity is 2^n numberes, where n is the lenght of the number
+// Space Complexity is 2^n numberes, where n is the lenght of the number.
+

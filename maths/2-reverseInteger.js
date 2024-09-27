@@ -1,3 +1,5 @@
+// https://getsdeready.com/courses/design-dsa-combined/lesson/reverse-integer-2/
+
 let reverse = (x) => {
     let isNegative = x < 0
     let n = Math.abs(x); // works with absolute value

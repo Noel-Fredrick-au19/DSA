@@ -1,3 +1,4 @@
+// https://getsdeready.com/courses/design-dsa-combined/lesson/factorial-trailing-zeroes-2/
 let trailingZeros = (n) => {
     let count = 0
     while (n !== 0) {

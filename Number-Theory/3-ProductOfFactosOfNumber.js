@@ -1,6 +1,8 @@
 // Product of factors of number
 // Given a number N. Calculate the product of all factors of N. Since Answer can be very large,compute the answer modulo 109+7.
 
+// https://getsdeready.com/courses/design-dsa-combined/lesson/product-of-factors-of-number/
+
 
 // Example 1:
 
@@ -68,10 +70,31 @@ function productOfFactors(N) {
 // Example usage
 let N = 6;
 
-console.log(productOfFactors(N)); // Output: 36
+// console.log(productOfFactors(N)); // Output: 36
+
+
+let factors = function (N) {
+    let product = 1
+    for (i = 1; i * i < N; i++) {
+        if (N % i === 0) {
+            let factor1 = i;
+            let factor2 = N / i;
+
+            product = (product * factor1) % 100
+            if (factor2 !== i) {
+                product = (product * factor2) % 100
+            }
+        }
+    }
+    return product
+}
+
+console.log('factorss', factors(6));
 
 
 
 // Complexity:
 // Time Complexity: 𝑂(sqrt 𝑁) dut to the loop running up to sqrtN
 // space compleixty Object(1) as no additional space is used
+
+

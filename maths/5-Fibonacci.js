@@ -41,3 +41,30 @@ let fib = (n) => {
 console.log(fib(3)); // Output: 2
 console.log(fib(5)); // Output: 5
 console.log(fib(10)); // Output: 55
+
+
+
+// to get in the form of array
+let fibInArray = (n) => {
+    if (n < 0) return []; // Handle negative input
+    if (n === 0) return [0]; // Return array with only the first Fibonacci number
+    if (n === 1) return [0, 1]; // Return array with the first two Fibonacci numbers
+
+    let fibArray = [0, 1]; // Initialize the array with the first two Fibonacci numbers
+    let a = 0;
+    let b = 1;
+
+    for (let i = 2; i <= n; i++) {
+        let c = a + b; // Calculate the next Fibonacci number
+        fibArray.push(c); // Add it to the array
+        a = b; // Update a to be the previous b
+        b = c; // Update b to be the new Fibonacci number
+    }
+
+    console.log('Fibonacci sequence:', fibArray); // Log the entire array
+    return fibArray; // Return the array of Fibonacci numbers
+}
+
+// Example usage:
+let result = fibInArray(4); // Call the function with n = 4
+console.log(result); // Output: [0, 1, 1, 2, 3]
