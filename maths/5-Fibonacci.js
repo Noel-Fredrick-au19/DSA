@@ -68,3 +68,15 @@ let fibInArray = (n) => {
 // Example usage:
 let result = fibInArray(4); // Call the function with n = 4
 console.log(result); // Output: [0, 1, 1, 2, 3]
+
+
+
+// Recursive Approach
+function fabonaccieRecursive(n){
+    if(n <= 1) return n;
+    return fabonaccieRecursive(n-1) + fabonaccieRecursive(n-2);
+}
+
+
+
+console.log(fabonaccieRecursive(10)); // 55

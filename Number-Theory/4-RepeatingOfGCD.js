@@ -24,9 +24,26 @@ function gcdOfStrings(N, x, y) {
     return N.repeat(gcdRepeation)
 }
 
-// Example usage
-let N1 = "1", x1 = 2, y1 = 3;
-console.log(gcdOfStrings(N1, x1, y1)); // Output: "1"
+// // Example usage
+// let N1 = "1", x1 = 2, y1 = 3;
+// console.log(gcdOfStrings(N1, x1, y1)); // Output: "1"
 
-let N2 = "2", x2 = 3, y2 = 4;
-console.log(gcdOfStrings(N2, x2, y2)); // Output: "2"
+// let N2 = "2", x2 = 3, y2 = 4;
+// console.log(gcdOfStrings(N2, x2, y2)); // Output: "2"
+
+
+
+
+let gcds = function (a, b) {
+    if (b === 0) {
+        return a;
+    } else {
+        return gcds(b, a % b)
+    }
+}
+let gcdOfRepeatedNumbers  = function (N, a, b) {
+    let gcdValue = gcds(a, b)
+    let result = N.toString().repeat(gcdValue)
+    return parseInt(result)
+}
+console.log('gcdOf Strings', gcdOfRepeatedNumbers (2, 2, 3))

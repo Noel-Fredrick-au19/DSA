@@ -19,7 +19,7 @@
 
 
 // Brutforce approach
-var commonFactors = function (a, b) {
+let commonFactors = function (a, b) {
     let count = 0;
     for (let i = 1; i <= Math.min(a, b); i++) {
         if (a % i === 0 && b % i === 0) {
@@ -34,7 +34,7 @@ var commonFactors = function (a, b) {
 
 
 // Optimal Approach using GCD
-var commonFactorsWIthGCD = function (a, b) {
+let commonFactorsWIthGCD = function (a, b) {
     // function gcd(x, y) {
     //     while (y !== 0) {
     //         let temp = y
